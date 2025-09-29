@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Mi Primer Proyecto",
+        "description": "Una breve descripción de lo que hace mi primer proyecto. Explica sus funcionalidades clave y tecnologías utilizadas.",
+        "readmeUrl": "https://github.com/gitarosales/AyPFigurasPHP/blob/main/README.md",
+        "repoUrl": "https://github.com/gitarosales/AyPFigurasPHP"
+    },
+    {
+        "name": "Mi Segundo Proyecto",
+        "description": "Este es otro proyecto importante. Detalla los problemas que resuelve y cómo lo implementaste.",
+        "readmeUrl": "https://raw.githubusercontent.com/[TuUsuario]/[nombre-del-otro-repo]/main/README.md",
+        "repoUrl": "https://github.com/[TuUsuario]/[nombre-del-repositorio]"
+    }
+]
