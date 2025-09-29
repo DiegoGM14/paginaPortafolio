@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectCard.className = 'project-card';
 
                 const projectNameLink = document.createElement('a');
-                projectNameLink.href = https://github.com/DiegoGM14/AyPFigurasPHP/tree/main; 
+                projectNameLink.href = project.repoUrl; 
                 projectNameLink.target = '_blank'; 
 
                 const projectName = document.createElement('h3');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectDesc.textContent = project.description;
 
                 const projectLink = document.createElement('a');
-                projectLink.href = https://github.com/DiegoGM14/AyPFigurasPHP/blob/main/README.md;
+                projectLink.href = project.readmeUrl;
                 projectLink.target = '_blank';
                 projectLink.textContent = 'Ver README';
 
