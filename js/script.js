@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Cargar proyectos dinámicos
   fetch('./projects.json')
     .then(response => {
       if (!response.ok) {
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       projects.forEach(project => {
         const projectCard = document.createElement('div');
-        projectCard.className = 'card';
+        projectCard.className = 'card scroll-fade'; // ← animación por scroll
 
         const projectImage = document.createElement('img');
         projectImage.src = project.image;
@@ -27,15 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         buttonGroup.className = 'button-group';
 
         const demoBtn = document.createElement('a');
-        demoBtn.href = project.demoUrl; 
+        demoBtn.href = project.demoUrl;
         demoBtn.target = '_blank';
-        demoBtn.textContent = 'Ver'; 
+        demoBtn.textContent = 'Ver';
         demoBtn.className = 'btn';
 
         const repoBtn = document.createElement('a');
-        repoBtn.href = project.repoUrl; 
+        repoBtn.href = project.repoUrl;
         repoBtn.target = '_blank';
-        repoBtn.textContent = 'Repo'; 
+        repoBtn.textContent = 'Repo';
         repoBtn.className = 'btn';
 
         buttonGroup.appendChild(demoBtn);
@@ -48,6 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projectsContainer.appendChild(projectCard);
       });
+
+      // Activar animaciones por scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+
+      document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
     })
     .catch(error => {
       console.error('Hubo un problema con la operación de fetch:', error);
@@ -55,5 +67,3 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
     });
 });
-
-
