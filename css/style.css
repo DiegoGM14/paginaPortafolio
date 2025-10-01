@@ -179,13 +179,15 @@ h2 {
 }
 
 .skill-card {
-  background-color: var(--bg-light);
+  background-color: var(--card-bg); 
+  border: 2px solid var(--blue-gamer); 
+  border-radius: 10px;
   padding: 1rem;
-  border-radius: 8px;
-  width: 120px;
+  width: 100%;
+  max-width: 280px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(13, 71, 161, 0.2);
-  transition: transform var(--transition-fast);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4); /* efecto neón */
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   animation: fadeInCard 0.6s ease forwards;
   color: var(--text-dark);
 }
@@ -233,3 +235,4 @@ footer {
   border-top: 2px solid var(--gray-metal);
   animation: fadeInBody 1s ease-in;
 }
+
