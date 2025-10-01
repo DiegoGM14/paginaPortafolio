@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Desarrollador</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Yahel García Muciño | Portafolio</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header>
+    <h1>Diego Yahel García Muciño</h1>
+    <p>Desarrollador de Software</p>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#redes">Redes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Diego Yahel Garcia Muciño</h1>
-        <p>Desarrollador de Software</p>
-    </header>
-
-    <section id="about">
-        <h2>Acerca de mí</h2>
-        <p>Aquí puedes escribir una breve biografía sobre tus habilidades, experiencia y lo que te apasiona en el mundo de la programación.</p>
+  <main>
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy un apasionado de los videojuegos y del desarrollo web. Cuando algo me interesa, me obsesiono por dominarlo. Me encanta crear páginas web y experimentar con nuevas formas de estilización. Aprendo como una esponja y disfruto cada reto técnico.</p>
+      <p>Estudio la carrera de Tecnólogo en Desarrollo de Software en el CETI desde 2021 hasta este año. Mi enfoque combina creatividad visual con lógica estructurada.</p>
     </section>
 
-    <section id="links">
-        <h2>Enlaces</h2>
-        <ul>
-            <li><a href="https://github.com/[TuUsuario]" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/[TuPerfil]" target="_blank">LinkedIn</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-        </ul>
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+
+      <!-- Proyectos estáticos -->
+      <div class="grid">
+        <div class="card">
+          <img src="img/marron.png" alt="Marron's Gym" />
+          <h3>Marron's Gym</h3>
+          <p>Sitio web enfocado en la gestión de rutinas y clientes en un gimnasio.</p>
+        </div>
+        <div class="card">
+          <img src="img/luchacaps.png" alt="Lucha Caps" />
+          <h3>Lucha Caps</h3>
+          <p>Plataforma creada para la venta en línea de gorras.</p>
+        </div>
+        <div class="card">
+          <img src="img/gamemoon.png" alt="Game Moon" />
+          <h3>Game Moon</h3>
+          <p>Sitio web de venta de productos relacionados a los videojuegos.</p>
+        </div>
+      </div>
+
+      <!-- Proyectos dinámicos -->
+      <div id="projects-container" class="grid"></div>
     </section>
 
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <div id="projects-container">
-            </div>
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="img/html.svg" alt="HTML5 Logo" />
+          <p>HTML5</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/css.svg" alt="CSS3 Logo" />
+          <p>CSS3</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/js.png" alt="JavaScript Logo" />
+          <p>JavaScript</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>2025 &copy; Diego Yahel Garcia Muciño</p>
-    </footer>
+    <section id="redes">
+      <h2>Redes Sociales</h2>
+      <div class="social-grid">
+        <a href="https://github.com/DiegoGM14" target="_blank">
+          <img src="img/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/diego-yahel-garcia-muci%C3%B1o-0a2403368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/share/1CtaqUaimc/" target="_blank">
+          <img src="img/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/diego_gm_444?igsh=MTRhcGl3NmZkZzBtNw==" target="_blank">
+          <img src="img/ig.png" alt="Instagram" />
+        </a>
+      </div>
+    </section>
 
-    <script src="js/script.js"></script>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Email: jeymananero@gmail.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Diego Yahel García Muciño. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
