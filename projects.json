@@ -1,23 +1,23 @@
 [
-    {
-        "name": "Marron's GYM",
-        "description": "Sitio web enfocado en la gestión de rutinas y clientes en un gimnasio.",
-        "readmeUrl": "https://github.com/DiegoGM14/Marron-s-GYM/blob/main/README.md",
-        "repoUrl": "https://github.com/DiegoGM14/Marron-s-GYM"
-    },
-    {
-        "name": "Lucha Caps",
-        "description": "Plataforma creada para la venta en linea de gorras.",
-        "readmeUrl": "https://github.com/DiegoGM14/LuchaCaps/blob/main/README.md",
-        "repoUrl": "https://github.com/DiegoGM14/LuchaCaps"
-    }
-      {
-        "name": "Game Moon",
-        "description": "Sitio web de venta de productos relacionados a los videojuegos.",
-        "readmeUrl": "https://github.com/DiegoGM14/GameMoon/blob/main/README.md",
-        "repoUrl": "https://github.com/DiegoGM14/GameMoon"
-    }
+  {
+    "name": "Marron's GYM",
+    "description": "Sitio web enfocado en la gestión de rutinas y clientes en un gimnasio.",
+    "image": "img/marron.png",
+    "demoUrl": "https://github.com/DiegoGM14/Marron-s-GYM/blob/main/README.md",
+    "repoUrl": "https://github.com/DiegoGM14/Marron-s-GYM"
+  },
+  {
+    "name": "Lucha Caps",
+    "description": "Plataforma creada para la venta en línea de gorras.",
+    "image": "img/luchacaps.png",
+    "demoUrl": "https://github.com/DiegoGM14/LuchaCaps/blob/main/README.md",
+    "repoUrl": "https://github.com/DiegoGM14/LuchaCaps"
+  },
+  {
+    "name": "Game Moon",
+    "description": "Sitio web de venta de productos relacionados a los videojuegos.",
+    "image": "img/gamemoon.png",
+    "demoUrl": "https://github.com/DiegoGM14/GameMoon/blob/main/README.md",
+    "repoUrl": "https://github.com/DiegoGM14/GameMoon"
+  }
 ]
-
-
-
