@@ -1,7 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   // ---- EFECTO ESCRITURA EN NOMBRE ----
-document.addEventListener("DOMContentLoaded", function() {
   const mensaje = "Diego Yahel García Muciño";
   const velocidad = 120; // milisegundos por letra
   let i = 0;
@@ -13,49 +11,47 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(escribirTexto, velocidad);
     }
   }
-
   escribirTexto();
-});
-  
-  // Cargar proyectos dinámicos
-  fetch('./projects.json')
+
+  // ---- CARGAR PROYECTOS DINÁMICOS ----
+  fetch("./projects.json")
     .then(response => {
       if (!response.ok) {
-        throw new Error('Error al cargar el archivo JSON');
+        throw new Error("Error al cargar el archivo JSON");
       }
       return response.json();
     })
     .then(projects => {
-      const projectsContainer = document.getElementById('projects-container');
+      const projectsContainer = document.getElementById("projects-container");
 
       projects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'card scroll-fade'; // ← animación por scroll
+        const projectCard = document.createElement("div");
+        projectCard.className = "card scroll-fade";
 
-        const projectImage = document.createElement('img');
+        const projectImage = document.createElement("img");
         projectImage.src = project.image;
         projectImage.alt = project.name;
 
-        const projectTitle = document.createElement('h3');
+        const projectTitle = document.createElement("h3");
         projectTitle.textContent = project.name;
 
-        const projectDesc = document.createElement('p');
+        const projectDesc = document.createElement("p");
         projectDesc.textContent = project.description;
 
-        const buttonGroup = document.createElement('div');
-        buttonGroup.className = 'button-group';
+        const buttonGroup = document.createElement("div");
+        buttonGroup.className = "button-group";
 
-        const demoBtn = document.createElement('a');
+        const demoBtn = document.createElement("a");
         demoBtn.href = project.demoUrl;
-        demoBtn.target = '_blank';
-        demoBtn.textContent = 'Ver';
-        demoBtn.className = 'btn';
+        demoBtn.target = "_blank";
+        demoBtn.textContent = "Ver";
+        demoBtn.className = "btn";
 
-        const repoBtn = document.createElement('a');
+        const repoBtn = document.createElement("a");
         repoBtn.href = project.repoUrl;
-        repoBtn.target = '_blank';
-        repoBtn.textContent = 'Readme';
-        repoBtn.className = 'btn';
+        repoBtn.target = "_blank";
+        repoBtn.textContent = "Readme";
+        repoBtn.className = "btn";
 
         buttonGroup.appendChild(demoBtn);
         buttonGroup.appendChild(repoBtn);
@@ -68,22 +64,20 @@ document.addEventListener("DOMContentLoaded", function() {
         projectsContainer.appendChild(projectCard);
       });
 
-      // Activar animaciones por scroll
-      const observer = new IntersectionObserver((entries) => {
+      // ---- ANIMACIONES POR SCROLL ----
+      const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
           }
         });
       });
 
-      document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+      document.querySelectorAll(".scroll-fade").forEach(el => observer.observe(el));
     })
     .catch(error => {
-      console.error('Hubo un problema con la operación de fetch:', error);
-      const projectsContainer = document.getElementById('projects-container');
-      projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
+      console.error("Hubo un problema con la operación de fetch:", error);
+      const projectsContainer = document.getElementById("projects-container");
+      projectsContainer.innerHTML = "<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>";
     });
 });
-
-
