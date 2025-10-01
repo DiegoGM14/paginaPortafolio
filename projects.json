@@ -1,14 +1,21 @@
 [
     {
-        "name": "Mi Primer Proyecto",
-        "description": "Una breve descripción de lo que hace mi primer proyecto. Explica sus funcionalidades clave y tecnologías utilizadas.",
-        "readmeUrl": "https://github.com/DiegoGM14/AyPFigurasPHP/blob/main/README.md",
-        "repoUrl": "https://github.com/DiegoGM14/AyPFigurasPHP"
+        "name": "Marron's GYM",
+        "description": "Sitio web enfocado en la gestión de rutinas y clientes en un gimnasio.",
+        "readmeUrl": "https://github.com/DiegoGM14/Marron-s-GYM/blob/main/README.md",
+        "repoUrl": "https://github.com/DiegoGM14/Marron-s-GYM"
     },
     {
-        "name": "Mi Segundo Proyecto",
-        "description": "Este es otro proyecto importante. Detalla los problemas que resuelve y cómo lo implementaste.",
+        "name": "Lucha Caps",
+        "description": "Plataforma creada para la venta en linea de gorras.",
+        "readmeUrl": "https://github.com/DiegoGM14/CalculadoraPython/blob/main/README.md",
+        "repoUrl": "https://github.com/DiegoGM14/CalculadoraPython"
+    }
+      {
+        "name": "Game Moon",
+        "description": "Sitio web de venta de productos relacionados a los videojuegos.",
         "readmeUrl": "https://github.com/DiegoGM14/CalculadoraPython/blob/main/README.md",
         "repoUrl": "https://github.com/DiegoGM14/CalculadoraPython"
     }
 ]
+
