@@ -1,45 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./projects.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar el archivo JSON');
-            }
-            return response.json();
-        })
-        .then(projects => {
-            const projectsContainer = document.getElementById('projects-container');
-            
-             projects.forEach(project => {
-                const projectCard = document.createElement('div');
-                projectCard.className = 'project-card';
+  fetch('./projects.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error al cargar el archivo JSON');
+      }
+      return response.json();
+    })
+    .then(projects => {
+      const projectsContainer = document.getElementById('projects-container');
 
-                const projectNameLink = document.createElement('a');
-                projectNameLink.href = project.repoUrl; 
-                projectNameLink.target = '_blank'; 
+      projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'card';
 
-                const projectName = document.createElement('h3');
-                projectName.textContent = project.name;
+        const projectImage = document.createElement('img');
+        projectImage.src = project.image;
+        projectImage.alt = project.name;
 
-                projectNameLink.appendChild(projectName);
+        const projectTitle = document.createElement('h3');
+        projectTitle.textContent = project.name;
 
-                const projectDesc = document.createElement('p');
-                projectDesc.textContent = project.description;
+        const projectDesc = document.createElement('p');
+        projectDesc.textContent = project.description;
 
-                const projectLink = document.createElement('a');
-                projectLink.href = project.readmeUrl;
-                projectLink.target = '_blank';
-                projectLink.textContent = 'Ver README';
+        const buttonGroup = document.createElement('div');
+        buttonGroup.className = 'button-group';
 
-                projectCard.appendChild(projectNameLink);
-                projectCard.appendChild(projectDesc);
-                projectCard.appendChild(projectLink);
+        const demoBtn = document.createElement('a');
+        demoBtn.href = project.demoUrl;
+        demoBtn.target = '_blank';
+        demoBtn.textContent = 'Ver';
+        demoBtn.className = 'btn';
 
-                projectsContainer.appendChild(projectCard);
-            });
-        })
-        .catch(error => {
-            console.error('Hubo un problema con la operación de fetch:', error);
-            const projectsContainer = document.getElementById('projects-container');
-            projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
-        });
+        const repoBtn = document.createElement('a');
+        repoBtn.href = project.repoUrl;
+        repoBtn.target = '_blank';
+        repoBtn.textContent = 'Repo';
+        repoBtn.className = 'btn';
+
+        buttonGroup.appendChild(demoBtn);
+        buttonGroup.appendChild(repoBtn);
+
+        projectCard.appendChild(projectImage);
+        projectCard.appendChild(projectTitle);
+        projectCard.appendChild(projectDesc);
+        projectCard.appendChild(buttonGroup);
+
+        projectsContainer.appendChild(projectCard);
+      });
+    })
+    .catch(error => {
+      console.error('Hubo un problema con la operación de fetch:', error);
+      const projectsContainer = document.getElementById('projects-container');
+      projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
+    });
 });
