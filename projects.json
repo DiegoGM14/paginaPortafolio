@@ -8,14 +8,15 @@
     {
         "name": "Lucha Caps",
         "description": "Plataforma creada para la venta en linea de gorras.",
-        "readmeUrl": "https://github.com/DiegoGM14/CalculadoraPython/blob/main/README.md",
-        "repoUrl": "https://github.com/DiegoGM14/CalculadoraPython"
+        "readmeUrl": "https://github.com/DiegoGM14/GameMoon/blob/main/README.md",
+        "repoUrl": "https://github.com/DiegoGM14/LuchaCaps"
     }
       {
         "name": "Game Moon",
         "description": "Sitio web de venta de productos relacionados a los videojuegos.",
-        "readmeUrl": "https://github.com/DiegoGM14/CalculadoraPython/blob/main/README.md",
+        "readmeUrl": "https://github.com/DiegoGM14/GameMoon/blob/main/README.md",
         "repoUrl": "https://github.com/DiegoGM14/CalculadoraPython"
     }
 ]
+
 
