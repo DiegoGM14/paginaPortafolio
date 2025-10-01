@@ -259,4 +259,26 @@ footer a {
 
 footer a:hover {
   text-shadow: 0 0 10px var(--blue-neon);
+
+  /* ---- EFECTO ESCRITURA ---- */
+#nombre {
+  font-family: 'Courier New', monospace;
+  font-size: 36px;
+  color: #00f3ff; /* azul cian gamer */
+  white-space: pre;
 }
+
+#cursor {
+  display: inline-block;
+  width: 10px;
+  height: 36px;
+  background-color: #00f3ff;
+  margin-left: 5px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
