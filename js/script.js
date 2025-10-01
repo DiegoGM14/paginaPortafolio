@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         buttonGroup.className = 'button-group';
 
         const demoBtn = document.createElement('a');
-        demoBtn.href = project.demoUrl;
+        demoBtn.href = project.demoUrl; 
         demoBtn.target = '_blank';
-        demoBtn.textContent = 'Repo';
+        demoBtn.textContent = 'Ver'; 
         demoBtn.className = 'btn';
 
         const repoBtn = document.createElement('a');
-        repoBtn.href = project.repoUrl;
+        repoBtn.href = project.repoUrl; 
         repoBtn.target = '_blank';
-        repoBtn.textContent = 'Ver';
+        repoBtn.textContent = 'Repo'; 
         repoBtn.className = 'btn';
 
         buttonGroup.appendChild(demoBtn);
@@ -55,4 +55,5 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
     });
 });
+
 
