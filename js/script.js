@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const repoBtn = document.createElement('a');
         repoBtn.href = project.repoUrl;
         repoBtn.target = '_blank';
-        repoBtn.textContent = 'Repo';
+        repoBtn.textContent = 'Readme';
         repoBtn.className = 'btn';
 
         buttonGroup.appendChild(demoBtn);
@@ -67,3 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsContainer.innerHTML = '<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>';
     });
 });
+
