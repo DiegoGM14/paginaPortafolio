@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- EFECTO ESCRITURA EN NOMBRE ----
-  const mensaje = "Diego Yahel García Muciño";
-  const velocidad = 120; // milisegundos por letra
+  const mensaje = "Diego Yahel Garcia Muciño";
+  const velocidad = 120; 
   let i = 0;
 
   function escribirTexto() {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   escribirTexto();
 
-  // ---- CARGAR PROYECTOS DINÁMICOS ----
+
   fetch("./projects.json")
     .then(response => {
       if (!response.ok) {
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         projectsContainer.appendChild(projectCard);
       });
 
-      // ---- ANIMACIONES POR SCROLL ----
+
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -81,3 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
       projectsContainer.innerHTML = "<p>No se pudieron cargar los proyectos. Inténtalo de nuevo más tarde.</p>";
     });
 });
+
